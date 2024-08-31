@@ -1,8 +1,9 @@
 <?php
-$servername = "localhost";
-$username = "root";  // altere se necessário
-$password = "";  // altere se necessário
-$dbname = "twitter_prototipo";
+// Obter as variáveis de ambiente
+$servername = getenv('mysql.railway.internal');
+$username = getenv('root');
+$password = getenv('kznStRpAmQTFvMYcDVOJjShaCaACMptD');
+$dbname = getenv('railway');
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
